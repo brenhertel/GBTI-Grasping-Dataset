@@ -26,3 +26,14 @@ The shape of the stored arrays is as follows:
 Note that the `Grasping_Demos.h5` file provides raw demo data, `Grasping_Demos_DS.h5` provides demonstrations downsampled using the Ramer-Douglas-Peucker algorithm, and `Grasping_Demos_RS.h5` provides demonstrations resampled using a spline for each data stream, with a smoothing factor of 0.1 (see https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.UnivariateSpline.html for details). For the DS and RS datasets, all demonstrations are sampled to a length of 1000 samples. For the RS dataset, all time fields are replaced be an n x {time} array, where time includes both seconds and nanoseconds. Additionally, all times in the RS dataset are the same, and start from time t=0.
 
 To view examples of how to read and plot the provided data, see `read_demos.py` and `plot_demos.py` files.
+
+If you use the dataset or code present in this repository, please cite the following paper:
+```
+@inproceedings{hertel2026forceConstrained,
+  title={One-Shot Multimodal Learning from Demonstration with Force-Constrained Elastic Maps},
+  author={Hertel, Brendan and Spanos, Jonathan and Garg, Navya and Azadeh, Reza},
+  booktitle={2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2026},
+  organization={IEEE}
+}
+```
